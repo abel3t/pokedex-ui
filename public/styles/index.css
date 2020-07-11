@@ -1,0 +1,83 @@
+@import '~antd/dist/antd.css';
+
+.type {
+    width: 30%;
+    display: inline-block;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1em;
+    margin-left: 2px
+}
+
+.normal {
+    background: #a4acaf;
+}
+
+.flying {
+    background: linear-gradient(#3dc7ef 50%, #bdb9d8 50%);
+}
+
+.ground {
+    background: linear-gradient(#f7de3f 50%, #ab9842 50%)
+}
+
+.bug {
+    background: #729f3f;
+}
+
+.stell {
+    background: #9eb7b8;
+}
+
+.water {
+    background: #4592c4;
+}
+
+.electric {
+    background: #eed535;
+}
+
+.ice {
+    background: #51c4e7;
+}
+
+.dark {
+    background: #707070;
+}
+
+.fighting {
+    background: #d56723;
+}
+
+.poison {
+    background: #b97fc9;
+}
+
+.rock {
+    background: #a38c21;
+}
+
+.ghost {
+    background: #7b62a3;
+}
+
+.fire {
+    background: #fd7d24;
+}
+
+.grass {
+    background: #9bcc50;
+}
+
+.psychic {
+    background: #f366b9;
+}
+
+.dragon {
+    background: linear-gradient(#53a4cf 50%, #f16e57 50%)
+}
+
+.fairy {
+    background: #fdb9e9;
+}
