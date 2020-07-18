@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const Meta = () => {
   return (
@@ -33,11 +33,11 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`Pokemon`}
+        content={'Pokemon'}
       />
       {/*<meta property="og:image" content={HOME_OG_IMAGE_URL} />*/}
     </Head>
-  )
-}
+  );
+};
 
-export default Meta
+export default Meta;

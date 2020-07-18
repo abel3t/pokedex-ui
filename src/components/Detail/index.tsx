@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { getPokemon } from '../../services/pokemons'
+import * as React from 'react';
+import { getPokemon } from '../../services/pokemons';
 import { Card } from 'antd';
 
 export default class PokemonDetail extends React.Component<any, any>{
@@ -13,7 +13,7 @@ export default class PokemonDetail extends React.Component<any, any>{
       src: ''
     },
     isLoaded: false
-  }
+  };
 
   fetchData() {
     if (this.props.id) {
@@ -22,17 +22,17 @@ export default class PokemonDetail extends React.Component<any, any>{
           this.setState({
             pokemon: data,
             isLoaded: true
-          })
+          });
         })
         .catch(error => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     }
   }
 
   render() {
     if (!this.state.isLoaded) {
-      this.fetchData()
+      this.fetchData();
     }
     return this.state.isLoaded && (
       <Card
@@ -41,6 +41,6 @@ export default class PokemonDetail extends React.Component<any, any>{
         cover={<img alt="" src={this.state.pokemon.src} />}
       >
       </Card>
-    )
+    );
   }
 }

@@ -1,12 +1,13 @@
-import * as React from 'react'
-import { Card, Typography } from 'antd'
-import Link from 'next/link'
+import * as React from 'react';
+import { Card, Typography } from 'antd';
+import Link from 'next/link';
 
 type Props = {
   pokemon: any
-}
+};
 
 export default function PokemonImage({pokemon}: Props) {
+  console.log(pokemon.types, '__op')
   return (
     <Link href={`/detail/${pokemon?.id}`}>
       <Card hoverable style={{width: 220}} cover={<img alt="" src={pokemon.src}/>}>
@@ -24,5 +25,5 @@ export default function PokemonImage({pokemon}: Props) {
         </div>
       </Card>
     </Link>
-  )
+  );
 }

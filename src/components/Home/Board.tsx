@@ -1,19 +1,16 @@
-import * as React from 'react'
-import { Row, Col } from 'antd'
+import * as React from 'react';
+import { Row, Col } from 'antd';
 
-import PokemonImage from './PokemonImage'
+import PokemonImage from './PokemonImage';
 
-type Pokemon = {
-  pokemon: any
-}
-type Props = {
-  pokemons: Array<Pokemon>
-}
+type State = {
+  pokemons: any
+};
 
-export default function Board({pokemons}: Props) {
-  let i = 0
-  let limit = 4
-  let result = [];
+export default function Board({pokemons}: State) {
+  let i = 0;
+  const limit = 4;
+  const result = [];
   while (i < pokemons.length - 3) {
     result.push(
       <Row key={`group-${i}`} gutter={[12, 12]}>
@@ -22,13 +19,13 @@ export default function Board({pokemons}: Props) {
         <Col span={6} key={i+2} children={<PokemonImage pokemon={pokemons[i+2]} />}/>
         <Col span={6} key={i+3} children={<PokemonImage pokemon={pokemons[i+3]} />}/>
       </Row>
-    )
-    i += limit
+    );
+    i += limit;
   }
 
   return (
     <>
       { result }
     </>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { storage, firestore } from '../helpers/firebase'
+import { storage, firestore } from '../helpers/firebase';
 
 export const getPokemon = async (id: number) => {
   return new Promise((resolve, reject) => {
@@ -11,16 +11,16 @@ export const getPokemon = async (id: number) => {
         }
       })
       .catch(error => {
-        console.log(`Error Here ${error}`)
+        console.log(`Error Here ${error}`);
         reject(error)
       })
   })
 }
 
 export const getPokemons = async (skip: number, limit: number) => {
-  let result = []
+  const result = [];
   for (let i = skip; i < skip + limit; i++) {
-    result.push(getPokemon(i +  1))
+    result.push(getPokemon(i +  1));
   }
   return Promise.all(result)
-}
+};
